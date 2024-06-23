@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "destination_id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "destination_id",
+          "url",
+          "type",
+          "title",
+          "destination"
+        ]
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "number"
+        },
+        "per_page": {
+          "type": "number"
+        },
+        "current_page": {
+          "type": "number"
+        },
+        "last_page": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "total",
+        "per_page",
+        "current_page",
+        "last_page"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "message",
+    "data",
+    "pagination"
+  ]
+}

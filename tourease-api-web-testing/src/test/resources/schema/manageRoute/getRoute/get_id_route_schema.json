@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "kota": {
+          "type": "string"
+        },
+        "destinasi": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nama_destinasi": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "nama_destinasi"
+            ]
+          }
+        },
+        "estimasi_biaya": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "username",
+        "kota",
+        "destinasi",
+        "estimasi_biaya"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "message",
+    "data"
+  ]
+}
