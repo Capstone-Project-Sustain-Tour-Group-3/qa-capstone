@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "nama_lengkap": {
+          "type": "string"
+        },
+        "bio": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "no_telepon": {
+          "type": "string"
+        },
+        "foto_profil": {
+          "type": "string"
+        },
+        "jenis_kelamin": {
+          "type": "string"
+        },
+        "kota": {
+          "type": "string"
+        },
+        "provinsi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "username",
+        "nama_lengkap",
+        "bio",
+        "email",
+        "no_telepon",
+        "foto_profil",
+        "jenis_kelamin",
+        "kota",
+        "provinsi"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "message",
+    "data"
+  ]
+}
