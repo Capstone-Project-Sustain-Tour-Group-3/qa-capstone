@@ -132,4 +132,22 @@ export default class RegisterPage extends BasePage {
     async clicKirimButton() {
         await this.click('//android.widget.Button[@content-desc="Kirim"]');
     }
+
+    async insertOtpUsername(username) {
+        const otpUsernameContentElement =
+          '//android.widget.EditText[1]';
+    
+        await this.click(otpUsernameContentElement);
+    
+        await this.type(otpUsernameContentElement, username);
+    }
+
+    async insertOtpEmail(email) {
+        const otpEmailContentElement =
+          '//android.widget.EditText[3]';
+    
+        await this.click(otpEmailContentElement);
+    
+        await this.type(otpEmailContentElement, email);
+    }
 }

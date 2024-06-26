@@ -1,6 +1,6 @@
 Feature: Login
   As a user 
-  I can login to a exciting account
+  I can login to an exciting account
   So that I can access the application
   
   Scenario: Can Login with valid credentials
