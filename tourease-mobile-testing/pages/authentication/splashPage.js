@@ -15,15 +15,6 @@ Jelajahi destinasi wisata tersembunyi di indonesia, temukan tempat-tempat yang b
         return splashTitle;
     }
 
-    // async getSplashTitle() {
-    //     const splashTitleComponent = await this.find(
-    //         '//android.widget.Button[@content-desc="Skip"]'
-    //     );
-
-    //     const splashTitle = await splashTitleComponent.getAttribute("content-desc");
-    //     return splashTitle;
-    // }
-
     async clickSkipButton() {
         await this.click(
             '//android.widget.Button[@content-desc="Skip"]'

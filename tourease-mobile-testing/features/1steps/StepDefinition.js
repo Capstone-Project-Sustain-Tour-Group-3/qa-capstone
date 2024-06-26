@@ -7,6 +7,12 @@ import RegisterPage from "../../pages/authentication/registerPage.js";
 import HomePage from "../../pages/authentication/homePage.js";
 import LoginPage from "../../pages/authentication/loginPage.js";
 import BasePage from "../../pages/basePage.js";
+import EditPage from "../../pages/profile/editPage.js";
+import RoutePage from "../../pages/profile/routePage.js";
+import AboutUsPage from "../../pages/profile/aboutUsPage.js";
+import DestinationPage from "../../pages/destination/destinationPage.js";
+import PersonalizedPage from "../../pages/personalized/personalizedPage.js";
+import ContentPage from "../../pages/content/contentPage.js";
 
 let driver;
 let splashPage;
@@ -14,6 +20,12 @@ let registerPage;
 let homePage;
 let loginPage;
 let basePage;
+let editPage;
+let routePage;
+let destinationPage;
+let personalizedPage;
+let aboutUsPage;
+let contentPage;
 
 Before({ timeout: 6000 * 10000 }, async () => {
   try {
@@ -23,12 +35,20 @@ Before({ timeout: 6000 * 10000 }, async () => {
     registerPage = new RegisterPage(driver);
     loginPage = new LoginPage(driver);
     basePage = new BasePage(driver);
+    editPage = new EditPage(driver);
+    routePage = new RoutePage(driver);
+    aboutUsPage = new AboutUsPage(driver);
+    destinationPage = new DestinationPage(driver);
+    personalizedPage = new PersonalizedPage(driver);
+    contentPage = new ContentPage(driver);
   } catch (error) {
     console.error(error);
   }
 });
 
-// AUTHENTICATION - REGISTER
+
+//======================================== AUTHENTICATION - REGISTER ========================================
+
 Given("I am on the splash screen page", { timeout: 20 * 1000 }, async () => {
     const splashPageTitle = await splashPage.getSplashTitle();
     const normalizedSplashTitle = splashPageTitle.replace(/\n/g, ' ');
@@ -55,27 +75,28 @@ Then("I am on the register page", async () => {
 });
 
 Then("I input a valid username", async () => {
-    const username = "caelus";
+    const username = "anindya";
     await registerPage.insertUsername(username);
 });
 
 Then("I input a valid full name", async () => {
-    const fullname = "caelus stellaron";
+    const fullname = "anindyaearly";
     await registerPage.insertFullname(fullname);
 });
 
 Then("I input a valid email address", async () => {
-    const email = "inicaelus@gmail.co";
+    const email = "anindyaearly@gmail.com";
     await registerPage.insertEmail(email);
 });
 
 Then("I input a valid phone number", async () => {
-    const number = "081818181818";
+    const number = "08189923845";
     await registerPage.insertNumber(number);
 });
 
-Then("I input a valid password", { timeout: 20 * 1000 }, async () => {
-    const password = "toureaseamanda";
+Then("I input a valid password", async () => {
+    await basePage.hideKeyboard();
+    const password = "toureaseanindya";
     await registerPage.insertPassword(password);
 });
 
@@ -99,6 +120,16 @@ Then("I cannot click Daftar Akun button", async () => {
 Then("I redirected to failed register page", async () => {
     const failedRegisPageTitle = await registerPage.getFailedRegisterTitle();
     assert.equal(failedRegisPageTitle, "Maaf, pembuatan akun gagal.");
+});
+
+Then("I input a valid username for otp", async () => {
+    const username = "dindawati";
+    await registerPage.insertOtpUsername(username);
+});
+
+Then("I input a valid email address for otp", async () => {
+    const email = "dindawatinur@gmail.com";
+    await registerPage.insertOtpEmail(email);
 });
 
 Then("I input first OTP", async () => {
@@ -126,7 +157,8 @@ Then("I click Kirim button", async () => {
 });
 
 
-// AUTHENTICATION - LOGIN
+//======================================== AUTHENTICATION - LOGIN ========================================
+
 Then("I click Masuk button", async () => {
     await splashPage.clicMasukButton();
 });
@@ -204,6 +236,84 @@ Then("I click Batal Button", async () => {
 Then("I returned to the profile page", async () => {
     const returnedProfilePage = await loginPage.getProfileTitle();
     assert.equal(returnedProfilePage, "Profil");
+});
+
+
+//======================================== PROFILE - EDIT ========================================
+
+Then("I redirected to the profile page", async () => {
+    const redirectedProfilePage = await editPage.getProfileTitle();
+    assert.equal(redirectedProfilePage, "Profil");
+});
+
+Then("I click Edit Akun section", async () => {
+    await editPage.clicEditSection();
+});
+
+Then("I redirected to the edit page", async () => {
+    const redirectedEditPage = await editPage.getEditTitle();
+    assert.equal(redirectedEditPage, "Edit Profil");
+});
+
+
+//======================================== PROFILE - SAVED ROUTE ========================================
+
+Then("I click Rute Tersimpan section", async () => {
+    await routePage.clickSavedRouteSection();
+});
+
+Then("I redirected to the saved route page", async () => {
+    const redirectedSavedRoutePage = await routePage.getSavedRouteTitle();
+    assert.equal(redirectedSavedRoutePage, "Rute Tersimpan");
+});
+
+
+//======================================== PROFILE - ABOUT US ========================================
+
+Then("I click Tentang Kami section", async () => {
+    await aboutUsPage.clickAboutUsSection();
+});
+
+Then("I redirected to the about us page", async () => {
+    const redirectedAboutUsPage = await aboutUsPage.getAboutUsTitle();
+    assert.equal(redirectedAboutUsPage, "Tentang Kami");
+});
+
+
+//======================================== DESTINATION ========================================
+
+Then("I click Destinasi button", async () => {
+    await destinationPage.clickDestinationButton();
+});
+
+Then("I redirected to the destination page", async () => {
+    const redirectedDestinationPage = await destinationPage.getDestinationTitle();
+    assert.equal(redirectedDestinationPage, "Destinasi");
+});
+
+Then("I select the desired destination", async () => {
+    await destinationPage.clickDestinationButton();
+});
+
+
+//======================================== PERSONALIZED RECOMMENDATION ========================================
+
+Then("I input a valid username for personalized recommendation", async () => {
+    const email = "diani";
+    await personalizedPage.insertUsernamePersonalized(email);
+});
+
+Then("I input a valid email address for personalized recommendation", async () => {
+    const email = "diahdiani@gmail.com";
+    await personalizedPage.insertEmailPersonalized(email);
+});
+
+
+//======================================== VIDEO CONTENT - FROM DESTINATION ========================================
+
+Then("I see video content from the destination", async () => {
+    const redirectedVideoContentPage = await contentPage.getVideoContentTitle();
+    assert.equal(redirectedVideoContentPage, "Curug Pelangi");
 });
 
 After(async () => {
