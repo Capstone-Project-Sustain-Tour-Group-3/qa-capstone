@@ -14,7 +14,8 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class EditUser {
     private static String url = "https://api.tourease.my.id/v1/admin";
-    private static String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjNkZTc3ZDNhLTA1NDItNDY0My04N2ZkLTcxNWNhZmEzYzExNyIsIlVzZXJuYW1lIjoiYWRtaW50b3VyZWFzZSIsIlJvbGUiOiJhZG1pbiIsImV4cCI6MTcxOTM3OTM1MywiaWF0IjoxNzE5Mzc4MTUzLCJuYmYiOjE3MTkzNzgxNTN9.4afzJYbSrWNMYNLlWM8VZeLPpa5iju7tvUobv4QVIow";
+    private static String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjNkZTc3ZDNhLTA1NDItNDY0My04N2ZkLTcxNWNhZmEzYzExNyIsIlVzZXJuYW1lIjoiYWRtaW50b3VyZWFzZSIsIlJvbGUiOiJhZG1pbiIsImV4cCI6MTcxOTM4MTYwNCwiaWF0IjoxNzE5MzgwNDA0LCJuYmYiOjE3MTkzODA0MDR9.3FkNuEs_aJg_-FJIodofRh8jGKPoAfPziVnqq2zY5FM";
+
     @Step("I set API endpoint for edit user data")
     public String setEditUserApiEndpoint() {
         return url + "/users/083cb941-9a91-4ea4-af6e-5b25384ff00b";
