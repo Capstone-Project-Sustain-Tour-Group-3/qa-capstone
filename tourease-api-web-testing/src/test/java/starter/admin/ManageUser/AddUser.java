@@ -3,7 +3,6 @@ package starter.admin.ManageUser;
 import  io.restassured.http.ContentType;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.rest.SerenityRest;
-import org.json.JSONObject;
 import starter.utils.JsonSchema;
 import starter.utils.JsonSchemaHelper;
 
@@ -15,7 +14,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class AddUser {
     private static String url = "https://api.tourease.my.id/v1/admin";
-    private static String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjNkZTc3ZDNhLTA1NDItNDY0My04N2ZkLTcxNWNhZmEzYzExNyIsIlVzZXJuYW1lIjoiYWRtaW50b3VyZWFzZSIsIlJvbGUiOiJhZG1pbiIsImV4cCI6MTcxOTE1NjYyMCwiaWF0IjoxNzE5MTU1NDIwLCJuYmYiOjE3MTkxNTU0MjB9.Ygkn7STsOSKDoIRjNoJOcLml3QQIOe2QJt8E9eUb-cg";
+    private static String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjNkZTc3ZDNhLTA1NDItNDY0My04N2ZkLTcxNWNhZmEzYzExNyIsIlVzZXJuYW1lIjoiYWRtaW50b3VyZWFzZSIsIlJvbGUiOiJhZG1pbiIsImV4cCI6MTcxOTM3NjMyMiwiaWF0IjoxNzE5Mzc1MTIyLCJuYmYiOjE3MTkzNzUxMjJ9.t-4qps0GrmN0TZgeuDgts_2HzdGZMXgR-uXecbSNECY";
 
     @Step("I set API endpoint for add user data")
     public String setAddUserApiEndpoint() {
@@ -28,11 +27,11 @@ public class AddUser {
 
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART)
-                .multiPart("username", "qealterraaaa")
+                .multiPart("username", "naviaa")
                 .multiPart("password", "123321")
                 .multiPart("nama_lengkap", "nama lengkap")
                 .multiPart("bio", "aaqqqqqq")
-                .multiPart("email", "qealterraaa@gmail.com")
+                .multiPart("email", "naviaa@gmail.com")
                 .multiPart("no_telepon", "081818181818")
                 .multiPart("foto_profil",sampleFile)
                 .multiPart("jenis_kelamin", "pria")

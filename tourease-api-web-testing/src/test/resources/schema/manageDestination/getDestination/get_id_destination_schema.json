@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id_destinasi": {
+          "type": "string"
+        },
+        "nama_destinasi": {
+          "type": "string"
+        },
+        "jam_buka": {
+          "type": "string"
+        },
+        "jam_tutup": {
+          "type": "string"
+        },
+        "harga_masuk": {
+          "type": "number"
+        },
+        "visit_count": {
+          "type": "number"
+        },
+        "deskripsi": {
+          "type": "string"
+        },
+        "alamat_destinasi": {
+          "type": "object",
+          "properties": {
+            "id_alamat": {
+              "type": "string"
+            },
+            "id_provinsi": {
+              "type": "string"
+            },
+            "provinsi": {
+              "type": "string"
+            },
+            "id_kota": {
+              "type": "string"
+            },
+            "kota": {
+              "type": "string"
+            },
+            "id_kecamatan": {
+              "type": "string"
+            },
+            "kecamatan": {
+              "type": "string"
+            },
+            "nama_jalan": {
+              "type": "string"
+            },
+            "kode_pos": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_alamat",
+            "id_provinsi",
+            "provinsi",
+            "id_kota",
+            "kota",
+            "id_kecamatan",
+            "kecamatan",
+            "nama_jalan",
+            "kode_pos"
+          ]
+        },
+        "url_gambar": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id_media": {
+                "type": "string"
+              },
+              "url_media": {
+                "type": "string"
+              },
+              "tipe": {
+                "type": "string"
+              },
+              "judul": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id_media",
+              "url_media",
+              "tipe",
+              "judul"
+            ]
+          }
+        },
+        "kategori": {
+          "type": "object",
+          "properties": {
+            "id_kategori": {
+              "type": "string"
+            },
+            "nama": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id_kategori",
+            "nama"
+          ]
+        },
+        "fasilitas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id_fasilitas": {
+                "type": "string"
+              },
+              "nama": {
+                "type": "string"
+              },
+              "url_logo": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id_fasilitas",
+              "nama",
+              "url_logo"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id_destinasi",
+        "nama_destinasi",
+        "jam_buka",
+        "jam_tutup",
+        "harga_masuk",
+        "visit_count",
+        "deskripsi",
+        "alamat_destinasi",
+        "url_gambar",
+        "kategori",
+        "fasilitas"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "message",
+    "data"
+  ]
+}
