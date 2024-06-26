@@ -17,4 +17,8 @@ public class JsonSchema {
     public static final String ADD_CONTENT_SCHEMA = "schema/manageContent/addContent/add_content_schema.json";
     public static final String FAILED_ADD_CONTENT_SCHEMA = "schema/manageContent/addContent/failed_add_content_schema.json";
     public static final String FAILED_EDIT_CONTENT_SCHEMA = "schema/manageContent/editContent/failed_edit_content_schema.json";
+    public static final String GET_ALL_ADMIN_SCHEMA = "schema/manageAdmin/getAdmin/get_all_admin_schema.json";
+    public static final String GET_ID_ADMIN_SCHEMA = "schema/manageAdmin/getAdmin/get_id_admin_schema.json";
+    public static final String GET_ALL_DESTINATION_SCHEMA = "schema/manageDestination/getDestination/get_all_destination_schema.json";
+    public static final String GET_ID_DESTINATION_SCHEMA = "schema/manageDestination/getDestination/get_id_destination_schema.json";
 }

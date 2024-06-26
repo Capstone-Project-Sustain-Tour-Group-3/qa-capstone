@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "foto_profil": {},
+        "tanggal_pembuatan": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "foto_profil",
+        "tanggal_pembuatan"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "message",
+    "data"
+  ]
+}

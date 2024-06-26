@@ -11,7 +11,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class GetUser {
     private static String url = "https://api.tourease.my.id/v1/admin";
-    private static String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjNkZTc3ZDNhLTA1NDItNDY0My04N2ZkLTcxNWNhZmEzYzExNyIsIlVzZXJuYW1lIjoiYWRtaW50b3VyZWFzZSIsIlJvbGUiOiJhZG1pbiIsImV4cCI6MTcxOTE1NzI3MCwiaWF0IjoxNzE5MTU2MDcwLCJuYmYiOjE3MTkxNTYwNzB9.JdtgZ25Fr_1Z3-oaOHjbkX1DWwGsiLiqrAxxAuoTEgY";
+    private static String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjNkZTc3ZDNhLTA1NDItNDY0My04N2ZkLTcxNWNhZmEzYzExNyIsIlVzZXJuYW1lIjoiYWRtaW50b3VyZWFzZSIsIlJvbGUiOiJhZG1pbiIsImV4cCI6MTcxOTM4MTYwNCwiaWF0IjoxNzE5MzgwNDA0LCJuYmYiOjE3MTkzODA0MDR9.3FkNuEs_aJg_-FJIodofRh8jGKPoAfPziVnqq2zY5FM";
 
     @Step("I set API endpoint for get all user detail")
     public String setGetAllUserApiEndpoint() {
