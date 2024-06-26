@@ -102,9 +102,9 @@ Feature: Register
     Then I click Mulai button
     Then I click Daftar button
     Then I am on the register page
-    Then I input a valid username
+    Then I input a valid username for otp
     Then I input a valid full name
-    Then I input a valid email address
+    Then I input a valid email address for otp
     Then I input a valid phone number
     Then I input a valid password
     Then I check on S&K option
