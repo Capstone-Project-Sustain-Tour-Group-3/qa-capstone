@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login" skipped="0" tests="2" time="80.5" timestamp="2024-06-26 03:32:36"><testcase name="Successful login with valid credentials"/><testcase name="Failed to login with valid credentials"/></testsuite>

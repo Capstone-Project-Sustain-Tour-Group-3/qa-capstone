@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Register to Account" skipped="0" tests="4" time="7.02" timestamp="2024-06-26 03:36:20"><testcase name="Register an account with valid input and valid fullname"><failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;409&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;409&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;201&gt; but was &lt;409&gt;.
+
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+starter.user.HTTPResponses.HTTPResponse.lambda$ReceiveResponse201$1(HTTPResponse.java:15)
+net.serenitybdd.rest.SerenityRest.restAssuredThat(SerenityRest.java:626)
+starter.user.HTTPResponses.HTTPResponse.ReceiveResponse201(HTTPResponse.java:15)
+starter.stepdefinitions.HTTPResponse.P_HTTPResponse.i_receive_status_code_201(P_HTTPResponse.java:26)
+</system-err></testcase><testcase name="Register an account with conflict email"/><testcase name="Register an account with conflict username"/><testcase name="Register an account with wrong email format"/></testsuite>

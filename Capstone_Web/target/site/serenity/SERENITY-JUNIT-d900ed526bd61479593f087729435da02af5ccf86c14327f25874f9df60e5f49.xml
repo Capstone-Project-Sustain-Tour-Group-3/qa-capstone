@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Manage User Detail" skipped="0" tests="2" time="12.07" timestamp="2024-06-26 03:34:42"><testcase name="Successful fo to user detail page with click right button"/><testcase name="Failed fo to user detail page with click right button"/></testsuite>

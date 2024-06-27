@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="See Content Detail" skipped="0" tests="2" time="12.08" timestamp="2024-06-26 03:33:57"><testcase name="Successful to see content detail page with click right button"/><testcase name="Successful to detail route page with wrong button"/></testsuite>

@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------
+Test set: starter.CucumberTestSuite
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 139.043 s <<< FAILURE! - in starter.CucumberTestSuite
+Manage User Route.Successful to detail route page with click right button #2  Time elapsed: 6.463 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.207)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.5.0-35-generic', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [920907a392327c8fe1664f3238c5c80d, clickElement {id=f.C473B87D0EC41B1A9EAE8EF40074F631.d.326C068F5BE7FFA9E8D9417A19587055.e.59}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.207, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44947}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:44947/devtoo..., se:cdpVersion: 124.0.6367.207, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (920907a392327c8fe1664f3238c5c80d)] -> xpath: //*[@id="root"]/div/main/div/div[2]/div/div/table/tbody/tr[1]/td[3]]
+Session ID: 920907a392327c8fe1664f3238c5c80d
+
+Create User.Successfuly Create Male User  Time elapsed: 11.034 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/\*\[\@id\=\"no_telepon\"\]"}
+  (Session info: chrome=124.0.6367.207)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.5.0-35-generic', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b16615f216d7bf5607615dd085db0f2e, findElement {using=id, value=//*[@id="no_telepon"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.207, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40081}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40081/devtoo..., se:cdpVersion: 124.0.6367.207, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b16615f216d7bf5607615dd085db0f2e
+
+Create User.Successfuly Create Female User  Time elapsed: 6.732 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'I write valid female input' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("I write valid female input")
+public void i_write_valid_female_input() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I go back to Manage User detail Page")
+public void i_go_back_to_manage_user_detail_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
